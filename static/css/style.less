@@ -271,11 +271,15 @@ body {
     }
     &.detail {
         padding: 1em 0;
+        max-width: 476px;
         &.image {
             img {
                 display: block;
                 margin: -3em -2.625em 1em -2.625em;
             }
+        }
+        iframe {
+            width: 100% !important;
         }
     }
 }
@@ -438,6 +442,12 @@ body {
         text-align: center;
         margin-top: 1em;
         &.ical { margin-top: 0; }
+    }
+    .post, .event {
+        img {
+            width: 100% !important;
+            height: auto;
+        }
     }
 }
 
