@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load page_tags %}
+
+
+{% block nav %}
+<ul>
+    {% get_root_pages "blanc_basic_events:events-home" as root_pages %}
+    {% for page, page_active in root_pages %}
+        <li><a href="{{ page.get_absolute_url }}"{% if page_active %} class="active"{% endif %}>{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock nav %}
